@@ -24,7 +24,7 @@ import java.util.List;
 public class BlogPost extends BaseEntity {
 
     @ManyToOne
-    @JoinColumn(name = "AUTHOR_ID", nullable = false)
+    @JoinColumn(name = "author_id", nullable = false)
     private Author author;
 
     @Embedded
