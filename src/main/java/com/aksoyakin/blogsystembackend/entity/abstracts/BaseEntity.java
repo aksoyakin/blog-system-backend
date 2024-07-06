@@ -5,7 +5,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * BaseEntity class is an abstract class.
@@ -19,13 +19,13 @@ public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private long id;
+    private Long id;
 
     @Column(name = "CREATED_DATE")
     @CreationTimestamp
-    private LocalDateTime createdDate;
+    private Date createdDate;
 
     @Column(name = "UPDATED_DATE")
     @UpdateTimestamp
-    private LocalDateTime updatedDate;
+    private Date updatedDate;
 }
